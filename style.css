@@ -1,0 +1,660 @@
+@font-face {
+    font-family: koho;
+    src: url(Asset/KoHo-Bold.ttf);
+}
+
+@font-face{
+    font-family: designer;
+    src: url(Asset/DESIGNER.otf)
+}
+
+*{
+    background-color: #F0F0F0;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    min-height: 100vh;
+    position: relative;
+}
+
+body{
+    padding-bottom: 5.4vw;
+}
+
+#overlay{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 11;
+}
+
+#overlay > *{
+    background-color: transparent;
+}
+
+#overlay a{
+    background-color: transparent;
+}
+
+.promo{
+    width: 80vw;
+}
+
+.closebutton{
+    background-color: transparent;
+}
+
+.closebutton img{
+    background-color: transparent;
+    width: 5%;
+    float: right;
+    margin: 0.5vw 0;
+    cursor: pointer;
+}
+
+.Header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vw 8vw;
+    z-index: 10;
+}
+
+.Logo{
+    width: 100%;
+}
+
+.menu a{
+    width: 100%;
+    text-decoration: none;
+    font-family: koho;
+    font-size: 26px;
+    background-color: #FF4372;
+    background-image: linear-gradient(180deg, #FFFFFF 61.98%, rgba(255, 218, 218, 0) 100%);
+    background-repeat: repeat;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 1200px){
+    .menu a{
+        font-size: 40px;
+    }
+}
+
+.burger{
+    display: none;
+    align-items: center;
+    height: 40px;
+}
+
+.menuicon{
+    height: 30px;
+    float: left;
+}
+
+.menuicon img{
+    height: 100%;
+}
+
+.logo{
+    display: flex;
+    width: 15%;
+    min-width: 150px;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    .Header{
+        justify-content: none;
+    }
+
+    .menu a{
+        display: none;
+    }
+
+    .menuicon{
+        display: flex;
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+
+    .burger{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .HeaderResponsive{
+        position: sticky;
+        top: 0;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2vw 8vw;
+        z-index: 10;
+    }
+
+    .HeaderResponsive .logo{
+        display: none;
+    }
+
+    .HeaderResponsive .menu a{
+        display: block;
+    }
+
+    .HeaderResponsive .menu{
+        border-radius: 0 0;
+    }
+}
+
+.menu{
+    background-color: #FF4372;
+    border-radius: 0.4vw;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menu:hover{
+    background-color: #FF044C;
+}
+
+.search{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5vw 0;
+    border-top: black solid;
+    border-bottom: black solid;
+    border-width: 0.2vw 0 0.2vw 0;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+}
+  
+.inputSearch{
+    position: relative;
+    top: 50%;
+    width: 40vw;
+    font-size: 2.5vw;
+    text-align: center;
+    border: none;
+    background-color: white;
+    resize: none;
+    outline: none;
+    border-radius: 5vw;
+    padding: 0.5vw 0;
+    padding-left: 4vw;
+    padding-right: 1vw;
+}
+
+.inputSearch:focus{
+    outline: none;
+}
+
+.container img{
+    position: absolute;
+    left: 2%;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.magnify{
+    height: 80%;
+}
+
+.backbutton{
+    height: 100%;
+}
+
+.container a{
+    position: absolute;
+    height: 100%;
+    width: 1vw;
+    left: -45%;
+}
+
+footer{
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3vw;
+    height: 30px;
+    display: flex;
+    /* margin-top: auto; */
+    padding: 0.5vw 0;
+    border-top: black solid;
+    border-bottom: black solid;
+    border-width: 0.2vw 0 0.2vw 0;
+    flex-direction: row-reverse;
+    padding-right: 5vw;
+}
+
+@media screen and (min-width: 1200px) {
+    footer{
+        height: 50px;
+    }
+}
+
+footer img{
+    height: 100%;
+}
+
+footer a{
+    height: 100%;
+    margin: 0 2vw;
+}
+
+.spacing{
+    position: absolute;
+    height: 3vw;
+    bottom: 0;
+}
+
+.contentdeco{
+    z-index: 11;
+    position: absolute;
+    font-family: arial;
+    writing-mode: vertical-rl;
+    top: 0;
+    left: 2.5%;
+    background-color: transparent;
+    font-size: 2.5vw;
+    border-left: black solid;
+    border-right: black solid;
+    border-width: 0 0.2vw 0 0.2vw;
+    bottom: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.Banner{
+    position: relative;
+    height: 38vw;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 40%;
+}
+
+.content span{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    font-family: designer;
+    font-size: 5vw;
+    background-color: #FF044C;
+    color: white;
+}
+
+.content{
+    /* padding: 0 5vw; */
+    display: flex;
+    flex-direction: column;
+}
+
+.latestproduct{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    padding: 25vw 0;
+    font-size: 5vw;
+}
+
+.latestproduct div{
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+    top: 20%;
+    font-family: 'Bona Nova', serif;
+}
+
+.latestproduct img{
+    position: absolute;
+    left: 50;
+    top: 10%;
+    height: 80%;
+    width: 40%;
+    object-fit: cover;
+    object-position: 0 -10vw;
+}
+
+.aboutcontent{
+    padding: 2vw 7vw;
+    position: relative;
+    margin-bottom: 2vw;
+}
+
+.abouttext{
+    position: relative;
+    background-color: #FF4372;
+    width: 50vw;
+    height: 30vw;
+    padding: 1vw 0vw;
+    border-radius: 1vw;
+    width: 100%;
+    z-index: 4;
+}
+
+.abouttext p{
+    background-color: transparent;
+    position: absolute;
+    font-family: koho;
+    color: white;
+    font-size: 2.5vw;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 90%;
+}
+
+#history{
+    display: block;
+    text-align: center;
+}
+
+#vision{
+    display: none;
+    text-align: center;
+}
+
+#mission{
+    display: none;
+}
+
+.aboutbuttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 96%;
+    padding: 0 2%;
+}
+
+.aboutbuttons button{
+    top: -10%;
+    width: 25%;
+    border: none;
+    font-family: koho;
+    font-size: 2vw;
+    padding: 0.5vw 0;
+    border-bottom-right-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    transition: color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.aboutbuttons button:hover{
+    cursor: pointer;
+}
+
+#historybutton{
+    color: white;
+    background-color: #FF4372;
+}
+
+#visionbutton{
+    color: #FF044C;
+    background-color: transparent;
+}
+
+#missionbutton{
+    color: #FF044C;
+    background-color: transparent;
+}
+
+.promotioncontent{
+    display: flex;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+    padding: 2vw 0;
+    background-color: #FFA1BA;
+    height: 30vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.promocontainer{
+    width: 60vw;
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    height: 30vw;
+    width: 100%;
+}
+
+#prev, #next{
+    cursor: pointer;
+    background-color: #FF4372;
+    width: 5vw;
+    height: 18vw;
+    object-fit: contain;
+    padding: 0 1.5vw;
+}
+
+.subsForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
+}
+
+.form_item:not(.tnc, .subsradio){
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    justify-content: space-between;
+}
+
+.form_item label{
+    font-size: 32px;
+    font-family: koho;
+    color: white;
+}
+
+.subsradio{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.subsradio input{
+    width: 20px;
+    height: 20px;
+}
+
+.tnc{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.tnc input{
+    width: 20px;
+    height: 20px;
+}
+
+.tnc label{
+    padding-left: 15px;
+}
+
+.form_item input:not(#tnc_checkbox){
+    font-size: 20px;
+}
+
+.form{
+    background-color: #FF044C;
+    padding: 5vw 5vw;
+    border-radius: 20px;
+}
+
+.form > *{
+    background-color: transparent;
+}
+
+.form > * > *:not(input, button){
+    background-color: transparent;
+}
+
+.form_item button{
+    font-size: 32px;
+    width: 200px;
+    height: 60px;
+    font-family: koho;
+    color: white;
+    background-color: #FF4372;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.form_item button:hover{
+    background-color: #FFA1BA;
+}
+
+.productcontainer{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.image{
+    margin: 2vw 2vw;
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 5vw;
+    overflow: hidden;
+}
+
+.image__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px;
+}
+
+.image__overlayproduct{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: koho;
+    font-size: 2.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.image__overlayproduct>*{
+    background-color: transparent;
+}
+
+.image__title{
+    padding: 2vw 2vw;
+    background-color: #FF044C;
+    width: 100%;
+}
+
+.image__description{
+    position: relative;
+    top: 15%;
+    padding: 0 2vw;
+}
+
+.buynow{
+    position: relative;
+    top: 25%;
+    width: 50%;
+    height: 15%;
+    background-color: #FF4372;
+    font-size: 2vw;
+    font-family: koho;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buynow:hover{
+    background-color: #FFA1BA;
+}
+
+.productname{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-family: koho;
+    background-color: #FF044C;
+    color: white;
+    width: 40%;
+    text-align: center;
+    padding: 5% 0;
+    font-size: 2.5vw;
+    border-radius: 2vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.image__overlayproduct:hover{
+    opacity: 1;
+}
+
+.image:hover .productname{
+    opacity: 0;
+    top: 0;
+    width: 100%;
+}
+
+.last{
+    width: 84vw;
+}
+
+.last img{
+    width: 100%;
+    height: 100%;
+}
+
+.lastoverlay{
+    flex-direction: row;
+}
+
+.lastoverlay>.image__title{
+    width: 20%;
+    padding: 25% 2vw;
+}
+
+.lastcontainer p{
+    background-color: transparent;
+    padding-bottom: 2.5vw;
+}
+
+.lastcontainer button{
+    height: 7vw;
+}
+
+.last:hover .productname{
+    left: 0;
+    top: 50%;
+}
